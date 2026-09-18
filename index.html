@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MENZ | Men's Fashion Store</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+header{
+    background:#111;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    height:75px;
+    margin:auto;
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#d4af37;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+    height:620px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=1600&q=85");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero-content p{
+    color:#d4af37;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin:20px 0;
+}
+
+.hero-content h1 span{
+    color:#d4af37;
+}
+
+.hero-content h3{
+    font-size:16px;
+    font-weight:400;
+    color:#ddd;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#d4af37;
+    color:#111;
+    padding:14px 30px;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:translateY(-4px);
+}
+
+/* CATEGORY */
+
+.categories{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 25px;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.heading h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.heading p{
+    color:#777;
+    font-size:14px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.category{
+    height:230px;
+    border-radius:10px;
+    overflow:hidden;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:25px;
+
+    color:white;
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    transition:.4s;
+}
+
+.category::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent,#000d);
+}
+
+.category:hover{
+    transform:translateY(-8px);
+}
+
+.category-content{
+    position:relative;
+    z-index:2;
+}
+
+.category h3{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.category p{
+    font-size:12px;
+    color:#ddd;
+}
+
+.shirts{
+    background-image:url("https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=900&q=85");
+}
+
+.sweatshirt{
+    background-image:url("https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=85");
+}
+
+.pants{
+    background-image:url("https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=85");
+}
+
+.formal{
+    background-image:url("https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=85");
+}
+
+.shoes{
+    background-image:url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85");
+}
+
+.slippers{
+    background-image:url("https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=900&q=85");
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.footer-logo{
+    color:white;
+    font-size:26px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.footer-logo span{
+    color:#d4af37;
+}
+
+footer p{
+    font-size:12px;
+    margin:6px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:750px){
+
+    .nav-links{
+        gap:10px;
+    }
+
+    .nav-links a{
+        font-size:10px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+MEN<span>Z</span>
+</a>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="shirts.html">Shirts</a></li>
+<li><a href="sweatshirt.html">Sweatshirts</a></li>
+<li><a href="pants.html">Pants</a></li>
+<li><a href="formal-pants.html">Formal Pants</a></li>
+<li><a href="shoes.html">Shoes</a></li>
+<li><a href="slippers.html">Slippers</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<p>NEW SEASON • MEN'S COLLECTION</p>
+
+<h1>
+DEFINE YOUR <span>STYLE</span>
+</h1>
+
+<h3>
+Premium clothing and footwear designed for modern men.
+</h3>
+
+<a href="#categories" class="btn">
+EXPLORE COLLECTION
+</a>
+
+</div>
+
+</section>
+
+
+<section class="categories" id="categories">
+
+<div class="heading">
+
+<h2>Shop By Category</h2>
+
+<p>
+Explore our premium men's fashion collection
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<a href="shirts.html" class="category shirts">
+
+<div class="category-content">
+
+<h3>Shirts</h3>
+
+<p>Smart & Casual Men's Shirts →</p>
+
+</div>
+
+</a>
+
+
+<a href="sweatshirt.html" class="category sweatshirt">
+
+<div class="category-content">
+
+<h3>Sweatshirts</h3>
+
+<p>Comfortable Modern Layers →</p>
+
+</div>
+
+</a>
+
+
+<a href="pants.html" class="category pants">
+
+<div class="category-content">
+
+<h3>Pants</h3>
+
+<p>Everyday Men's Trousers →</p>
+
+</div>
+
+</a>
+
+
+<a href="formal-pants.html" class="category formal">
+
+<div class="category-content">
+
+<h3>Formal Pants</h3>
+
+<p>Office Ready Fits →</p>
+
+</div>
+
+</a>
+
+
+<a href="shoes.html" class="category shoes">
+
+<div class="category-content">
+
+<h3>Shoes</h3>
+
+<p>Sneakers & Footwear →</p>
+
+</div>
+
+</a>
+
+
+<a href="slippers.html" class="category slippers">
+
+<div class="category-content">
+
+<h3>Slippers</h3>
+
+<p>Everyday Comfort →</p>
+
+</div>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-logo">
+MEN<span>Z</span>
+</div>
+
+<p>Premium Men's Fashion Store</p>
+
+<p>© 2026 MENZ. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+
+</html>

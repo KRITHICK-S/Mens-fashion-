@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MENZ | Formal Shirts</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+header{
+    background:#111;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    height:75px;
+    margin:auto;
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#d4af37;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    font-size:11px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+    height:300px;
+
+    background:
+    linear-gradient(#0009,#0009),
+    url("https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&fit=crop&w=1600&q=85");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    margin-top:12px;
+    font-size:14px;
+    color:#ddd;
+}
+
+/* CONTENT */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 25px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:30px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.back:hover{
+    color:#d4af37;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:30px;
+}
+
+.title p{
+    color:#777;
+    font-size:13px;
+    margin-top:8px;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+
+    box-shadow:0 5px 20px #0001;
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px #0002;
+}
+
+.image{
+    height:330px;
+    overflow:hidden;
+}
+
+.image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.info{
+    padding:20px;
+}
+
+.info small{
+    color:#999;
+    font-size:10px;
+    text-transform:uppercase;
+}
+
+.info h3{
+    font-size:16px;
+    margin:8px 0;
+}
+
+.rating{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:17px;
+    font-weight:800;
+}
+
+.btn{
+    display:block;
+    background:#111;
+    color:white;
+
+    text-align:center;
+
+    padding:12px;
+    margin-top:15px;
+
+    font-size:11px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#d4af37;
+    color:#111;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:#aaa;
+
+    text-align:center;
+
+    padding:35px;
+
+    font-size:11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+MEN<span>Z</span>
+</a>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="shirts.html">Shirts</a></li>
+<li><a href="formal-shirts.html">Formal Shirts</a></li>
+<li><a href="sweatshirt.html">Sweatshirts</a></li>
+<li><a href="pants.html">Pants</a></li>
+<li><a href="formal-pants.html">Formal Pants</a></li>
+<li><a href="shoes.html">Shoes</a></li>
+<li><a href="slippers.html">Slippers</a></li>
+<li><a href="accessories.html">Accessories</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div>
+
+<h1>Formal Shirts</h1>
+
+<p>Sharp and elegant shirts for professional occasions.</p>
+
+</div>
+
+</section>
+
+
+<main class="container">
+
+<a href="index.html" class="back">
+← Back to Home
+</a>
+
+
+<div class="title">
+
+<h2>Formal Shirt Collection</h2>
+
+<p>Professional styles designed for modern men.</p>
+
+</div>
+
+
+<section class="products">
+
+
+<div class="card">
+
+<div class="image">
+
+<img src="https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="info">
+
+<small>Formal Shirt</small>
+
+<h3>Classic White Formal Shirt</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">₹1,499</div>
+
+<a href="#" class="btn">ADD TO CART</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="image">
+
+<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="info">
+
+<small>Formal Shirt</small>
+
+<h3>Premium Blue Shirt</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">₹1,599</div>
+
+<a href="#" class="btn">ADD TO CART</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="image">
+
+<img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="info">
+
+<small>Office Wear</small>
+
+<h3>Modern Office Shirt</h3>
+
+<div class="rating">★★★★☆</div>
+
+<div class="price">₹1,699</div>
+
+<a href="#" class="btn">ADD TO CART</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="image">
+
+<img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="info">
+
+<small>Formal Wear</small>
+
+<h3>Premium Black Formal Shirt</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">₹1,799</div>
+
+<a href="#" class="btn">ADD TO CART</a>
+
+</div>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+MENZ — Men's Fashion Store<br><br>
+
+© 2026 All Rights Reserved.
+
+</footer>
+
+
+</body>
+
+</html>
